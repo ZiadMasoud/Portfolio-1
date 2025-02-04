@@ -1,29 +1,31 @@
 :root {
   --primary-color: #6a8caf; 
-  --secondary-color: #f2d7d9; 
+  --secondary-color: #ffffff; 
   --background-color: #f5f5f5; 
   --text-color: #333; 
+  --font-size-base: 1.25rem; /* Base font size */
+  --font-size-sm: 1.125rem; /* Small font size */
+  --font-size-lg: 1.75rem; /* Large font size */
+  --font-size-xl: 2rem; /* Extra large font size */
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: Arial, sans-serif;
-  font-size: 1.2rem; /* Adjusted for better readability on smaller screens */
+  font-size: var(--font-size-base); /* Use base font size */
 }
 
 @media (max-width: 768px) {
   body {
-    font-size: 1rem; /* Further reduce font size on smaller screens */
+    font-size: var(--font-size-sm); /* Use small font size on smaller screens */
   }
 }
-
 
 .navbar {
   background-color: var(--primary-color);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
-
 
 .navbar-brand, .nav-link {
   color: white !important;
@@ -32,6 +34,7 @@ body {
 .section-title {
   color: var(--primary-color);
   margin-bottom: 1.5rem;
+  font-size: var(--font-size-xl); /* Use extra large font size for section titles */
 }
 
 .btn-primary {
@@ -46,10 +49,28 @@ body {
   color: white;
 }
 
-
-.btn-primary:hover {
+.hero-section {
   background-color: var(--primary-color);
   color: white;
+  padding: 5rem 0;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+section {
+  padding: 5rem 0; /* Consistent padding for all sections */
+}
+
+.bg-light {
+  background-color: var(--background-color);
 }
 
 footer {
@@ -61,7 +82,7 @@ footer {
   font-weight: bold;
   padding: 1.5rem;
   text-align: center;
-  font-size: 1.2rem; /* Adjusted for better readability */
+  font-size: var(--font-size-base); /* Use base font size */
   flex-wrap: wrap;
 }
 
@@ -74,14 +95,139 @@ footer p:hover {
   color: var(--text-color);
 }
 
-
-footer p {
-  color: white;
-  margin: 0 0.5rem;
+#contact {
+  padding: 3rem 0;
 }
 
-footer p:hover {
-  transition: .4S ease;
-  cursor:default;
+#contact .lead {
+  font-size: var(--font-size-lg); /* Use large font size for contact lead text */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+
+.contact-icons a {
   color: var(--text-color);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  color: var(--primary-color);
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  flex-wrap:nowrap;
+  font-size: var(--font-size-lg); /* Use large font size for contact details */
+}
+
+.contact-details p {
+  margin: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 60px;
+}
+
+.contact-details p a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-details p a:hover {
+  color: var(--primary-color);
+}
+
+.contact-details p i {
+  margin-right: 0.5rem;
+}
+
+.skill-item {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  height: 100%; /* Ensure all skill items have the same height */
+}
+
+.skill-item:hover {
+  transform: translateY(-10px);
+}
+
+.skill-title {
+  font-size: var(--font-size-lg);
+  margin-bottom: 0.5rem;
+}
+
+.skill-text {
+  font-size: var(--font-size-base);
+  margin-bottom: 0.5rem;
+}
+
+.project-item {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%; /* Ensure all project items have the same height */
+  margin-bottom: 1.5rem; /* Add gap between project items */
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+}
+
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-lg);
+  margin-bottom: 0.5rem;
+}
+
+.project-title a {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.project-title a:hover {
+  color: var(--text-color);
+}
+
+.project-text {
+  font-size: var(--font-size-base);
+  margin-bottom: 0.5rem;
+}
+
+.experience-item {
+  background-color: var(--secondary-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.experience-item h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: 1rem;
+}
+
+.experience-item p {
+  font-size: var(--font-size-base);
+}
+
+.extra-project,
+.extra-experience {
+  display: none;
 }
