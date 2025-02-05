@@ -248,3 +248,20 @@ footer p:hover {
 .extra-experience {
   display: none;
 }
+
+.education-item {
+  background-color: var(--secondary-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.education-item h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: 1rem;
+}
+
+.education-item p {
+  font-size: var(--font-size-base);
+}
