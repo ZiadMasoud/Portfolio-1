@@ -7,6 +7,8 @@
   --font-size-sm: 1.125rem; /* Small font size */
   --font-size-lg: 1.75rem; /* Large font size */
   --font-size-xl: 2rem; /* Extra large font size */
+  --selection-color: #00ffd5; /* New selection color */
+  --scrollbar-color: #6a8caf; /* Main color for scrollbar */
 }
 
 body {
@@ -14,6 +16,12 @@ body {
   color: var(--text-color);
   font-family: Arial, sans-serif;
   font-size: var(--font-size-base); /* Use base font size */
+}
+
+/* Change selection color */
+::selection {
+  background: var(--selection-color);
+  color: var(--text-color);
 }
 
 @media (max-width: 768px) {
@@ -264,4 +272,46 @@ footer p:hover {
 
 .education-item p {
   font-size: var(--font-size-base);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: 5px;
+  border: 3px solid var(--background-color);
+}
+
+/* Back to Top Button */
+#backToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+  z-index: 99;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%; /* Make it circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#backToTopBtn:hover {
+  background-color: var(--selection-color);
+  transform: translateY(-5px); /* Slight lift on hover */
 }
