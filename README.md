@@ -1,18 +1,13 @@
-# Portfolio-1
+# Portfolio-1 
 
 This is a personal portfolio website showcasing my skills, projects, and experience in finance and technology.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Usage](#usage)
 - [Contact](#contact)
-
-## Introduction
-
-Hello, I'm Ziad Masoud, a third-year Finance student with a strong passion for programming, data analysis, and front-end development. This portfolio highlights my academic journey, technical skills, and hands-on experience in various projects.
 
 ## Features
 
