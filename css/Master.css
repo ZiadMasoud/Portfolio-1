@@ -21,10 +21,27 @@ body {
     font-size: var(--font-size-sm); /* Use small font size on smaller screens */
   }
 }
-
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+  .hero-section h1 {
+    font-size: 2rem; /* Adjust hero section title font size for smaller screens */
+  }
+  .hero-section p {
+    font-size: 1rem; /* Adjust hero section paragraph font size for smaller screens */
+  }
+}
 .navbar {
   background-color: var(--primary-color);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+.navbar.sticky-top {
+  position: sticky;
+  top: 0;
+  background: rgba(106, 140, 175, 0.8); /* Low opacity background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  z-index: 1000; /* Ensure it stays above other content */
 }
 
 .navbar-brand, .nav-link {
@@ -40,18 +57,18 @@ body {
 .btn-primary {
   background-color: var(--secondary-color);
   border: none;
-  color: var(--text-color);
+  color: var(--primary-color);
   transition: background-color 0.3s ease; /* Added transition for hover effect */
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--text-color);
+  color: var(--secondary-color);
 }
 
 .hero-section {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--secondary-color);
   padding: 5rem 0;
 }
 
@@ -78,7 +95,7 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--secondary-color);
   font-weight: bold;
   padding: 1.5rem;
   text-align: center;

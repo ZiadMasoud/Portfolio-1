@@ -7,18 +7,21 @@ document.querySelectorAll(".navbar-nav a").forEach((anchor) => {
   });
 });
 
-document.getElementById("toggleProjects").addEventListener("click", function () {
-  const extraProjects = document.querySelectorAll(".extra-project");
-  extraProjects.forEach((project) => {
-    project.style.display = project.style.display === "none" ? "block" : "none";
-  });
-  this.textContent = this.textContent === "Show More Projects" ? "Show Less Projects" : "Show More Projects";
+document.getElementById("currentYear").textContent =
+new Date().getFullYear();
+
+document.getElementById("toggleProjects").addEventListener("click", function() {
+const extraProjects = document.querySelectorAll(".extra-project");
+extraProjects.forEach(project => {
+  project.style.display = project.style.display === "none" || project.style.display === "" ? "block" : "none";
+});
+this.textContent = this.textContent === "Show More Projects" ? "Show Less Projects" : "Show More Projects";
 });
 
-document.getElementById("toggleExperience").addEventListener("click", function () {
-  const extraExperience = document.querySelectorAll(".extra-experience");
-  extraExperience.forEach((experience) => {
-    experience.style.display = experience.style.display === "none" ? "block" : "none";
-  });
-  this.textContent = this.textContent === "Show More Experience" ? "Show Less Experience" : "Show More Experience";
+document.getElementById("toggleExperience").addEventListener("click", function() {
+const extraExperience = document.querySelectorAll(".extra-experience");
+extraExperience.forEach(experience => {
+  experience.style.display = experience.style.display === "none" || experience.style.display === "" ? "block" : "none";
+});
+this.textContent = this.textContent === "Show More Experience" ? "Show Less Experience" : "Show More Experience";
 });
