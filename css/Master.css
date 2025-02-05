@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #6a8caf; 
-  --secondary-color: #ffffff; 
-  --background-color: #f5f5f5; 
-  --text-color: #333; 
+  --primary-color: #6a8caf;
+  --secondary-color: #ffffff;
+  --background-color: #f5f5f5;
+  --text-color: #333;
   --font-size-base: 1.25rem; /* Base font size */
   --font-size-sm: 1.125rem; /* Small font size */
   --font-size-lg: 1.75rem; /* Large font size */
@@ -52,14 +52,17 @@ body {
   z-index: 1000; /* Ensure it stays above other content */
 }
 
-.navbar-brand, .nav-link {
+.navbar-brand,
+.nav-link {
   color: white !important;
 }
 
 .section-title {
   color: var(--primary-color);
   margin-bottom: 1.5rem;
-  font-size: var(--font-size-xl); /* Use extra large font size for section titles */
+  font-size: var(
+    --font-size-xl
+  ); /* Use extra large font size for section titles */
 }
 
 .btn-primary {
@@ -125,7 +128,9 @@ footer p:hover {
 }
 
 #contact .lead {
-  font-size: var(--font-size-lg); /* Use large font size for contact lead text */
+  font-size: var(
+    --font-size-lg
+  ); /* Use large font size for contact lead text */
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -150,7 +155,7 @@ footer p:hover {
 .contact-details {
   display: flex;
   justify-content: center;
-  flex-wrap:nowrap;
+  flex-wrap: nowrap;
   font-size: var(--font-size-lg); /* Use large font size for contact details */
 }
 
