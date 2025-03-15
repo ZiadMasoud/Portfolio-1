@@ -183,7 +183,7 @@ footer {
 
 footer p {
   margin: 0 0.5rem;
-  transition: color 0.2s ease; /* Added transition for hover effect */
+  transition: color 0.3s ease; /* Added transition for hover effect */
 }
 
 footer p:hover {
@@ -201,8 +201,6 @@ footer p:hover {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  text-align: left; /* Align the paragraph text to the left */
-  margin-left: 0; /* Remove any centering margin */
 }
 
 .contact-icons {
